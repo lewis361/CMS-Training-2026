@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>FCA Anti-Money Laundering Knowledge Test — City Mortgage Solutions Group</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="[fonts.googleapis.com](https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Sans+3:wght@300;400;600;700&display=swap)" rel="stylesheet">
 <style>
   :root{--navy:#003057;--navy2:#004a87;--gold:#c9972b;--gold2:#f0c050;--offwhite:#f4f1eb;--cream:#faf8f3;--text:#1a1a2e;--muted:#6b7280;--correct:#166534;--correct-bg:#dcfce7;--wrong:#991b1b;--wrong-bg:#fee2e2;--border:#d4cfc5}
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -24,7 +24,8 @@
   .name-card label{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;color:#fff;white-space:nowrap}
   .name-card label span{color:var(--gold2)}
   .name-select-wrap{flex:1;min-width:220px}
-  .name-select-wrap select{width:100%;padding:10px 36px 10px 16px;font-family:'Source Sans 3',sans-serif;font-size:15px;font-weight:600;background:rgba(255,255,255,.1);border:2px solid rgba(201,151,43,.6);border-radius:8px;color:#fff;cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23f0c050' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
+  .name-select-wrap select, .name-select-wrap input[type="email"]{width:100%;padding:10px 36px 10px 16px;font-family:'Source Sans 3',sans-serif;font-size:15px;font-weight:600;background:rgba(255,255,255,.1);border:2px solid rgba(201,151,43,.6);border-radius:8px;color:#fff;cursor:pointer;appearance:none;background-repeat:no-repeat;background-position:right 14px center}
+  .name-select-wrap select{background-image:url("data:image/svg+xml,%3Csvg xmlns='[w3.org](http://www.w3.org/2000/svg)' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23f0c050' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");}
   .name-select-wrap select option{background:var(--navy);color:#fff}
   .questions-wrap{display:flex;flex-direction:column;gap:16px}
   .q-card{background:var(--cream);border:1px solid var(--border);border-radius:12px;padding:22px 24px 20px;position:relative;transition:box-shadow .2s}
@@ -35,7 +36,7 @@
   .q-card.correct .q-number{background:var(--correct)}
   .q-card.wrong .q-number{background:var(--wrong)}
   .q-text{font-size:15px;font-weight:600;line-height:1.5;margin:12px 0 14px;padding-top:4px}
-  .q-select-wrap select{width:100%;padding:10px 40px 10px 14px;font-family:'Source Sans 3',sans-serif;font-size:14px;background:#fff;border:2px solid var(--border);border-radius:8px;color:var(--text);cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23003057' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
+  .q-select-wrap select{width:100%;padding:10px 40px 10px 14px;font-family:'Source Sans 3',sans-serif;font-size:14px;background:#fff;border:2px solid var(--border);border-radius:8px;color:var(--text);cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='[w3.org](http://www.w3.org/2000/svg)' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23003057' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
   .q-card.correct .q-select-wrap select{border-color:var(--correct)}
   .q-card.wrong .q-select-wrap select{border-color:var(--wrong)}
   .q-feedback{display:none;margin-top:12px;font-size:13px;line-height:1.5;padding:10px 14px;border-radius:7px}
@@ -86,7 +87,6 @@
     <a href="AML_Master.html" class="master-link">&#9654; View Master Results Sheet</a>
   </div>
 </header>
-
 <main>
   <div class="name-card">
     <label><span>&#9654;</span> Candidate Name</label>
@@ -132,16 +132,21 @@
       </select>
     </div>
   </div>
-
+  <!-- ADD THIS EMAIL FIELD HERE -->
+  <div class="name-card" style="margin-top: 16px;">
+    <label for="candidate-email"><span>&#9654;</span> Candidate Email</label>
+    <div class="name-select-wrap">
+      <input type="email" id="candidate-email" placeholder="Enter your email..." required style="width:100%; padding: 10px 14px; font-family:'Source Sans 3',sans-serif; font-size:15px; font-weight:600; background:rgba(255,255,255,.1); border:2px solid rgba(201,151,43,.6); border-radius:8px; color:#fff;" />
+      <!-- Ensure the style matches other input fields if you are using a consistent theme or integrate into your CSS -->
+    </div>
+  </div>
+  <!-- END OF NEW EMAIL FIELD -->
   <div class="questions-wrap" id="questions-wrap"></div>
-
   <div class="warn" id="warn-msg">Please select your name and answer all 10 questions before submitting.</div>
-
   <div class="submit-row">
     <button class="btn-submit" id="btn-submit">Submit &amp; See Results</button>
     <button class="btn-reset" id="btn-reset">Start Again</button>
   </div>
-
   <div class="score-box" id="score-box">
     <div class="score-header">
       <div class="score-circle">
@@ -167,11 +172,9 @@
     </div>
   </div>
 </main>
-
 <footer>
   Based on the MLRs 2017, POCA 2002 &amp; FCA AML Guidance &nbsp;|&nbsp; City Mortgage Solutions Group &nbsp;|&nbsp; Annual Testing 2026
 </footer>
-
 <script>
 const QUESTIONS = [
   {
@@ -285,8 +288,7 @@ const QUESTIONS = [
     explanation: "The risk-based approach means firms must identify, assess, and understand their money laundering and terrorist financing risks, then apply controls proportionate to those risks, focusing enhanced scrutiny where risk is highest."
   }
 ];
-
-const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz31uyoNXGzchrKuJNuB3zhIto_C9unuL1iodTBjMTGdlLTcNS6w7Jqn0a0-QJ8tk_u/exec'
+const APPS_SCRIPT_URL = '[script.google.com](https://script.google.com/macros/s/AKfycbzOfmZnIIB0mX76t8jMcDY7KN_A3mFEaskTHTchnOXf4Nju4lvZh3KtT0AUJOsF6hQ10g/exec)';
 const TEST_NAME = 'FCA Anti-Money Laundering';
 const STORAGE_KEY = 'cmsg_aml_results_2026';
 function loadResults() { try { return JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]'); } catch { return []; } }
@@ -303,7 +305,6 @@ function saveResult(e) {
     body: JSON.stringify({ ...e, test: TEST_NAME })
   }).catch(err => console.log('Sheet sync failed:', err));
 }
-
 const wrap = document.getElementById('questions-wrap');
 const selects = [];
 QUESTIONS.forEach((q, i) => {
@@ -319,12 +320,15 @@ QUESTIONS.forEach((q, i) => {
   card.appendChild(num); card.appendChild(text); card.appendChild(sw); card.appendChild(fb);
   wrap.appendChild(card);
 });
-
 document.getElementById('btn-submit').addEventListener('click', () => {
   const name = document.getElementById('candidate-name').value;
+  const email = document.getElementById('candidate-email').value; // Get the email value
   const allAnswered = selects.every(s => s.value !== '');
   const warn = document.getElementById('warn-msg');
-  if (!name || !allAnswered) { warn.classList.add('visible'); return; }
+  if (!name || !email || !allAnswered) { // Validate both name and email
+    warn.classList.add('visible');
+    return;
+  }
   warn.classList.remove('visible');
   let correct = 0;
   const answerLog = [];
@@ -342,11 +346,22 @@ document.getElementById('btn-submit').addEventListener('click', () => {
     answerLog.push({ q: i + 1, correct: ok, chosen, correctAnswer: q.answer });
   });
   document.getElementById('candidate-name').disabled = true;
+  document.getElementById('candidate-email').disabled = true; // Disable email field too
   const pct = Math.round((correct / 10) * 100);
   const passed = pct >= 80;
   const now = new Date();
   const timestamp = now.toLocaleDateString('en-GB') + ' ' + now.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
-  saveResult({ name, score: correct, pct, passed, timestamp, answers: answerLog });
+  saveResult({ 
+    name, 
+    email, // Include email here
+    score: correct, 
+    pct, 
+    passed, 
+    timestamp, 
+    answers: answerLog,
+    total: QUESTIONS.length, // Add total questions
+    questions: QUESTIONS // Optionally send questions array
+  });
   document.getElementById('sc-num').textContent = correct;
   document.getElementById('sc-pct').textContent = pct + '%';
   document.getElementById('sc-name').textContent = 'Candidate: ' + name;
@@ -365,10 +380,11 @@ document.getElementById('btn-submit').addEventListener('click', () => {
   document.getElementById('btn-reset').classList.add('visible');
   document.getElementById('score-box').scrollIntoView({ behavior: 'smooth', block: 'start' });
 });
-
 document.getElementById('btn-reset').addEventListener('click', () => {
   document.getElementById('candidate-name').value = '';
   document.getElementById('candidate-name').disabled = false;
+  document.getElementById('candidate-email').value = ''; // Clear email too
+  document.getElementById('candidate-email').disabled = false; // Enable email
   selects.forEach((s, i) => {
     s.value = ''; s.disabled = false;
     const card = document.getElementById(`card-${i}`);
